@@ -1,0 +1,425 @@
+/* Empty. Add your own CSS if you like */
+body{
+    background-color: #dddddd;
+}
+.item-complex .item-content{
+    padding: 0 !important;
+}
+.comment p{
+    margin: 0px;
+    font-size:small;
+}
+.item-comment{
+    margin-bottom: 5px !important;
+    border: none;
+    padding-top: 0px;
+}
+.user-profile{
+    width: 100%;
+    overflow: hidden;
+}
+.user-avatar{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 100%;
+}
+.user-avatar img{
+    width: 50px;
+    height: 50px;
+}
+.user-name{
+    width:auto;
+    font-size: small;
+    margin-left:60px;
+}
+.user-name h2{
+    margin: 0px 0px 3px 0px !important;
+    font-size:14px;
+    font-weight: 600;
+    color:#565656;
+    white-space: normal;
+}
+.user-name p{
+    margin: 3px 0px 0px 0px !important;
+    font-size:11px !important;
+}
+.feed-wrapper{
+    border: 1px solid #aaa;
+    margin-bottom:15px;
+    padding: 0px;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #BBBBBB;
+}
+.card-wrapper{
+    border: 1px solid #aaa;
+    margin-bottom:15px;
+    padding: 0 5px 15px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px #BBBBBB;
+}
+.feed{
+    margin:0px !important;
+}
+.feed-category{
+    padding: 6px 6px 5px;
+    background: #eeeeee;
+    border-bottom: 1px solid #c7c7c7;
+    font-size:14px;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.feed-title{
+    padding: 8px 12px 5px 12px;
+    font-size: 13px;
+    color: #2c2c2c;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.feed-body{
+    border-top: 1px solid #c7c7c7;
+    padding: 7px !important;
+}
+.feed-icons-tab{
+    background-color: #eeeeee !important;
+    border-top: 1px solid #c7c7c7 !important;
+}
+.feed-icons-tab .tab-item.active{
+    border-top: none !important;
+    border-color: #FFF !important;
+}
+.feed-icons-tab .action{
+    border-width: 0px !important;
+}
+.tabs-striped.tabs-color-positive .tab-item.tab-item-active{
+    border-color: #FFF !important;
+    /*border-top: 2px solid #387EF5 !important;*/
+}
+.category-title{
+    margin-top: 8px !important;
+    margin-left: 40px !important;
+    font-size: 16px;
+}
+.punch-line{
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #9f9f9f;
+}
+.inactive-icon{
+    color: #387EF5;
+    opacity: 0.4;
+}
+.apparel{
+    background: url('../img/apparel.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.auto{
+    background: url('../img/auto.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.books{
+    background: url('../img/books.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.electronics{
+    background: url('../img/electronics.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.hotels{
+    background: url('../img/hotels.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.lifestyle{
+    background: url('../img/lifestyle.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.miscellaneous{
+    background: url('../img/miscellaneous.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.movies{
+    background: url('../img/movies.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.music{
+    background: url('../img/music.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.restaurants{
+    background: url('../img/restaurants.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.services{
+     background: url('../img/services.png');
+     width: 34px;
+     height: 27px;
+     float: left;
+}
+.sports{
+    background: url('../img/sports.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+.travel{
+    background: url('../img/travel.png');
+    width: 34px;
+    height: 27px;
+    float: left;
+}
+
+/**** Login Start ****/
+.login-box{
+    text-align: center;
+    margin-top: 45%;
+}
+.btn-login{
+    width: 300px;
+}
+/**** Login End ****/
+
+/**** Header Start ****/
+.header {
+    background: linear-gradient(to bottom, #666 1%, #555 100%);
+    border-bottom: 2px solid #000;
+}
+.search-box{
+    height: 35px !important;
+    border: 1px solid #ddd;
+}
+.search-input{
+    border: 1px solid #D9D9D9;
+    height: 28px !important;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.search-btn {
+    position: absolute;
+    right: 1px;
+    top: 7px
+}
+.search-btn .icon-ios-search {
+    color: #6E6E6E;
+    font-size: 30px;
+}
+.item-side-menu{
+    padding: 10px !important;
+}
+.btn-user-settings{
+    margin-left:5px !important;
+    padding: 0px !important;
+    color: #ffffff;
+}
+.action-bar > .tabs{
+    height: 44px;
+}
+/**** Header End ****/
+.bottom-tab-bar .tabs {
+    top:auto !important;
+    bottom: 0 !important;
+    height: 53px;
+}
+.has-tabs-top-modal{
+    top: 50px;
+    margin-bottom: 50px;
+}
+.has-tabs-top-modal .item{
+    border-color: #ffffff;
+}
+.has-tabs-top-modal textarea, .has-tabs-top-modal input[type="text"]{
+    border: 1px solid #dddddd;
+    padding-left: 5px;
+}
+.has-tabs-top-modal button{
+    border-radius: 4px;
+}
+a.header-button{
+    color: #387EF5 !important;
+}
+.bar .button.button-clear.icon-left::before{
+    font-size: 25px;
+}
+.bar-subheader > .button-bar > .button::before{
+    font-size: 25px;
+}
+.grey-background{
+    background-color: #dddddd;
+}
+.avatar-settings > img:first-child{
+    border-radius: 0px !important;
+    top: 10px !important;
+    left: 10px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+}
+.comment-box{
+    border: 1px solid #ABABA8;
+}
+.comment-wrap{
+    padding: 0px !important;
+}
+.button-send-comment{
+    border: 1px solid !important;
+    font-size: 20px !important;
+    border-radius: 50%;
+}
+
+.people-like a.number{
+    text-decoration: none;
+    color: #777 !important;
+    font-size: 13px;
+}
+.icon-like-feed{
+    float:left;
+    margin:0px 8px;
+}
+.dashboard-filter{
+    height: 50px;
+}
+.select-filter{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+}
+/*** Rating start ***/
+ul.rating li {
+    display: inline;
+    border: 0px;
+    background: none;
+    padding: 5px 10px;
+}
+ul.rating li i {
+    font-size: 30px;
+}
+.rating-star ul.rating li {
+    padding: 2px 1px !important;
+}
+.rating-star ul.rating li i{
+    font-size: 18px !important;
+}
+.star-color{
+    color:#ED720A;
+}
+/*** Rating end ***/
+.item-input-wrapper{
+    background: #ffffff !important;
+}
+.item-avatar img{
+    border-radius: 0 !important;
+}
+.tabs-striped.tabs-color-positive .gray-tab{
+    color: rgb(192, 191, 191);
+}
+.no-sub-header{
+    margin-top: 44px;
+}
+.no-top-bar{
+    margin-top: 0px;
+    top:0;
+}
+.grey-btn{
+    color: #ffffff !important;
+    background-color: #aaa !important;
+}
+.grey-btn.activated {
+    background-color: #387ef5 !important;
+    border-color: #387ef5;
+}
+.modal-btn{
+    width: 85px;
+}
+.no-tabs-top{
+    top:0 !important;
+}
+.comments-wrapper .list{
+    margin-top: 25px;
+}
+.no-tabs-bot{
+    bottom: 0 !important;
+}
+.card-item{
+    margin-top: 0px !important; 
+    margin-bottom: 10px !important;
+}
+.title-image{
+    margin-top: -3px;
+}.footer {
+    background: #ECEBE7;
+    border: 1px solid #999999;
+    color: #a2a1a1;
+    height: 55px;
+    text-align: center;
+}
+.footer p {font-size: 13px; text-align: center;width: 100%}
+.footer a{
+    text-decoration: none;
+    color: inherit;
+}
+.page-content{
+    font-family: "Helvetica Neue", 'HelveticaNeueW01-55Roma', "Helvetica",
+    Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1;
+    color: #6F6F6F;
+}
+.page-content h4{
+    font-size: 15px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #6F6F6F;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.page-content h2{
+    font-size: 17px;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #6F6F6F;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+/** override ionic css */
+.loading-container .loading {
+    background-color: transparent;
+}

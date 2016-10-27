@@ -1,0 +1,26 @@
+<div ng-include src="'templates/partial/header.html'"></div>
+<div ng-include src="'templates/partial/sub-header.html'"></div>
+
+<ion-view view-title="Settings" ng-controller="SettingsCtrl as settingCtrl">
+    <ion-content class="padding">
+        <div class="list">
+            <avatar></avatar>
+
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-social-facebook"></i> Invite facebook friends
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-wrench"></i> User Settings
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-android-contacts"></i> Friends
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-ios-people"></i> Groups
+            </a>
+            <a class="item item-icon-left" href="#" ng-click='settingCtrl.logout()'>
+                <i class="icon ion-log-out"></i> Sign Out
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

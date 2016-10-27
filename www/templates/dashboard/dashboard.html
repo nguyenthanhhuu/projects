@@ -1,0 +1,66 @@
+<div ng-include src="'templates/partial/header.html'"></div>
+<!-- <div ng-include src="'templates/partial/sub-header.html'"></div> -->
+<ion-view view-title="Dashboard" ng-controller="DashboardCtrl">
+  <div class="bar-header">
+    <label class="item item-input no-sub-header dashboard-filter">
+      <select class="select-filter">
+        <option value="PUBLISHED_REVIEWS">Published Reviews</option>
+        <option value="SAVED_REVIEWS">Saved Reviews</option>
+        <option value="NEW_REQUESTS">New Requests</option>
+        <option value="ACCEPTED_REQUESTS">Accepted Requests</option>
+        <option value="REJECTED_REQUESTS">Rejected Requests</option>
+      </select>
+    </label>
+  </div>
+  <ion-content bottom-tab-fade class="padding grey-background has-header no-sub-header no-tabs-bot">
+    <ion-list>
+      <ion-item ng-repeat="feed in feeds" href="#/tab/feeds/{{feed.id}}" class="feed-wrapper">
+        <div class="list card feed">
+          <div class="feed-category">
+            <div class="{{feed.category|lowercase}}"></div>
+            <div class="category-title">{{feed.category}}</div>
+          </div>
+          <div class="feed-title">
+            <span>{{feed.title}}</span>
+          </div>
+          <div class="item item-body feed-body">
+            <div class="user-profile">
+              <div class="user-avatar">
+                <img ng-src="{{feed.face}}">
+              </div>
+              <div class="user-name">
+                <h2>{{feed.name}}</h2>
+                <p>{{feed.datetime}}</p>
+                <div class="rating-star star-color">
+                  <rating ng-model="rate" max="max" readonly="true"></rating>
+                </div>
+              </div>
+            </div>
+            <span class="punch-line">{{feed.punchLine}}</span>
+            <img class="full-image" ng-src="{{feed.image}}">
+            <p>{{feed.content}}</p>
+          </div>
+          <div class="item tabs tabs-secondary tabs-icon-left feed-icons-tab">
+            <a class="tab-item active" href="#">
+              <i class="icon ion-thumbsup"></i>
+              99
+            </a>
+            <a class="tab-item active" href="#">
+              <i class="icon ion-chatboxes"></i>
+              35
+            </a>
+            <a class="tab-item active" href="#">
+              <i class="icon ion-eye"></i>
+              200
+            </a>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div style="text-align:center">
+      <button class="button button-small button-positive">
+        Load more feeds
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<div class="list"ng-controller="SettingsCtrl as settingsCtrl">
+    <avatar ng-if='settingsCtrl.isLoggedin()'></avatar>
+    <a class="item item-icon-left" menu-close nav-clear ui-sref="tab.feeds">
+        <i class="icon-cs icon-feed"></i> Review Feeds
+    </a>
+    <a class="item item-icon-left" menu-close nav-clear ui-sref="tab.dashboard">
+        <i class="icon-cs icon-dashboard"></i> Dashboard
+    </a>
+    <a class="item item-icon-left" menu-close nav-clear href="#" ng-click="settingsCtrl.showWriteReviewModal()">
+        <i class="icon-cs icon-write"></i> Write Review
+    </a>
+    <a class="item item-icon-left" menu-close nav-clear href="#" ng-click="settingsCtrl.showRequestReviewModal()">
+        <i class="icon-cs icon-request"></i> Request Review
+    </a>
+    <a class="item item-icon-left" menu-close nav-clear ui-sref="tab.settings">
+        <i class="icon-cs icon-group"></i> Manage Groups
+    </a>
+    <a class="item item-icon-left" menu-close nav-clear href="#" ng-click='settingsCtrl.logout()'>
+        <i class="icon ion-log-out"></i> Sign Out
+    </a>
+</div>

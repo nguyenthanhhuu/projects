@@ -1,0 +1,84 @@
+<ion-modal-view class="grey-background">
+    <ion-content class="padding no-header" ng-controller="ManageGroupCtrl">
+        <div class="list card card-wrapper" ng-hide="showGroupDetail">
+            <div class="card-item">
+                <label class="item item-dark">
+                    <span class="">Create New Group</span>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Group Name<span class="assertive"> *</span></span>
+                    <input type="text" ng-model="groupName">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Description<span class="assertive"> *</span></span>
+                    <input type="text" placeholder="" ng-model="description">
+                </label>
+                <div class="text-center">
+                    <button class="button button-stable modal-btn grey-btn" >
+                        Add
+                    </button>
+                     <button class="button button-stable modal-btn grey-btn" ng-click="modal.hide()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <label class="item item-dark">
+                    <span class="">Group Names</span>
+                    <!--<i class="ion-compose manage-group-icon"></i>-->
+                    <!--<i class="ion-trash-b manage-group-icon"></i>-->
+                </label>
+                <ion-radio ng-model="selectedOption" value="1">Mobile App</ion-radio>
+                <ion-radio ng-model="selectedOption" value="2">Python</ion-radio>
+                <div class="text-center">
+                    <button class="button button-calm modal-btn " >
+                        Edit
+                    </button>
+                    <button class="button button-positive modal-btn ">
+                        Delete
+                    </button>
+                    <button class="button button-light modal-btn " ng-click="modal.hide()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list" ng-show="showGroupDetail">
+            <label class="item item-positive">
+                <span class="">Group Details</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Group Name<span class="assertive"> *</span></span>
+                <input type="text" ng-model="groupName">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Description<span class="assertive"> *</span></span>
+                <input type="text" placeholder="" ng-model="description">
+            </label>
+            <label class="item item-positive">
+                <span class="">Members</span>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Add Member<span class="assertive"> *</span></span>
+                <input type="text" placeholder="">
+            </label>
+            <ion-list ng-show="groupMembers.length > 0">
+                <ion-item ng-repeat="member in groupMembers">
+                    <i class="icon ion-trash-b" style="float: left;margin-top: 8%;"></i>
+                    <a class="item item-avatar" style="float:right;width:90%">
+                        <img ng-src="{{member.face}}">
+                        <h2>{{member.name}}</h2>
+                    </a>
+                </ion-item>
+            </ion-list>
+            <button class="button button-full button-positive">
+                Save
+            </button>
+            <button class="button button-full button-light" ng-click="back()">
+                Cancel
+            </button>
+        </div>
+    </ion-content>
+</ion-modal-view>

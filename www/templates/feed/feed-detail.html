@@ -1,0 +1,73 @@
+<div ng-include src="'templates/partial/header.html'"></div>
+<ion-view ng-controller="FeedDetailCtrl as feedDetailCtrl">
+	<ion-content bottom-tab-fade scroll-event-interval="5" class="padding no-sub-header grey-background no-tabs-bot no-tabs-top">
+		<ion-list>
+			<ion-item class="feed-wrapper" ng-if="feedDetailCtrl.feed.reviewId != null" ng-init="feed = feedDetailCtrl.feed">
+				<div class="list card feed">
+					<div class="feed-category">
+						<div class="{{feedDetailCtrl.feed.categoryName|lowercase}}"></div>
+						<div class="category-title">{{feedDetailCtrl.feed.categoryName}}</div>
+					</div>
+					<div class="feed-title">
+						<span>{{feedDetailCtrl.feed.reviewName}}</span>
+					</div>
+					<div class="item item-body feed-body">
+						<div class="user-profile">
+							<div class="user-avatar">
+								<img ng-src="{{feedDetailCtrl.feed.reviewerImageUrl}}" alt="{{feedDetailCtrl.feed.reviewerName}}" />
+							</div>
+							<div class="user-name">
+								<h2>{{feedDetailCtrl.feed.reviewerName}}</h2>
+								<p>{{feedDetailCtrl.feed.displayTime | timeago}}</p>
+								<div class="rating-star star-color">
+									<rating ng-model="feedDetailCtrl.feed.reviewRating" max="feedDetailCtrl.max" readonly="true"></rating>
+								</div>
+							</div>
+						</div>
+						<span class="punch-line">{{feedDetailCtrl.feed.reviewPunchLine}}</span>
+						<img ng-if="feedDetailCtrl.feed.displayReview != null" class="full-image" ng-src="{{feedDetailCtrl.feed.displayReview}}" />
+						<p>{{feedDetailCtrl.feed.reviewText}}</p>
+					</div>
+					
+					<div class="item tabs tabs-secondary tabs-icon-left feed-icons-tab">
+						<a class="tab-item active action" href="javascript:void(0)" ng-click="feedDetailCtrl.feed.likedByUser == true? feedDetailCtrl.unLikeReview() : feedDetailCtrl.likeReview()">
+							<span ng-if="feed.isLoaded == false"><ion-spinner icon="spiral"></ion-spinner></span>
+							<span ng-if="feed.isLoaded == true">
+								<i class="icon ion-thumbsup {{feedDetailCtrl.feed.likedByUser == true ? '' : 'inactive-icon'}}"></i>
+								{{feedDetailCtrl.feed.likesCount.toFormat()}}
+							</span>
+						</a>
+						<a class="tab-item active action" href="javascript:void(0)">
+							<i class="icon ion-chatboxes {{feedDetailCtrl.feed.commentedByUser ? '' : 'inactive-icon'}}"></i>
+							{{feedDetailCtrl.feed.commentsCount.formated}}
+						</a>
+						<a class="tab-item active action" href="javascript:void(0)">
+							<i class="icon ion-eye {{feedDetailCtrl.feed.viewedByUser ? '' : 'inactive-icon'}}"></i>
+							{{feedDetailCtrl.feed.viewsCount.formated}}
+						</a>
+					</div>
+					
+					<div class="bottom-20 clearfix"></div>
+					<ion-list review-comments class="comments-wrapper" comment="feedDetailCtrl.newComment" review="feedDetailCtrl.feed"></ion-list>
+					
+					<div class="item item-comment">
+						<div class="comment">
+							<div style="width:22%"><img ng-src="{{feedDetailCtrl.userAvatar}}" width="40" alt="{{feedDetailCtrl.user.userName}}" /></div>
+							<div style="width:78%;">
+								<div class="comment-content">
+									<div class="item item-input-inset" ng-if="feedDetailCtrl.isLoaded == true">
+										<label class="item-input-wrapper"><textarea ng-model="feedDetailCtrl.commentContent" ng-keyup="$event.keyCode == 13 ? feedDetailCtrl.addComment() : null" msd-elastic placeholder="Write a comment..." style="width: 100%;"></textarea></label>
+										<button class="button button-small button-clear button-assertive ion-paper-airplane button-send-comment" ng-click="feedDetailCtrl.addComment()"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center" ng-show="feedDetailCtrl.isLoaded == false">
+						<ion-spinner icon="spiral"></ion-spinner>
+					</div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

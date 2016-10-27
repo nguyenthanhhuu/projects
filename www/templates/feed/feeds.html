@@ -1,0 +1,16 @@
+<div ng-include src="'templates/partial/header.html'"></div>
+<!-- <div ng-include src="'templates/partial/sub-header.html'"></div> -->
+<ion-view ng-controller="FeedsCtrl as feedCtrl">
+  <ion-content bottom-tab-fade scroll-event-interval="5" class="padding no-sub-header grey-background no-tabs-bot no-tabs-top">
+    <ion-refresher on-refresh="feedCtrl.doRefresh()" pulling-text="Pull to refresh..." refreshing-icon="ion-loading-d">
+    </ion-refresher>
+    <ion-list>
+        <feed-item feeds='feedCtrl.feeds'></feed-item>
+    </ion-list>
+
+    <div style="text-align:center" class="padding-bottom">
+        <button ng-click="feedCtrl.loadMore()" ng-show="!feedCtrl.is_end_list && !feedCtrl.loadingMore" class="button button-small button-positive" id="load-more">Load more feeds</button>
+        <ion-spinner icon="spiral" ng-show="feedCtrl.loadingMore"></ion-spinner>
+    </div>
+  </ion-content>
+</ion-view>

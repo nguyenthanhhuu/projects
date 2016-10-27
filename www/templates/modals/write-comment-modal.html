@@ -1,0 +1,50 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <a class="button icon-left ion-ios7-arrow-left button-clear" ng-click="modal.hide()"></a>
+        <a class="button button-small button-clear" ng-click="modal.hide()">Post</a>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div style="width: 100%;" >
+            <a class="tab-item icon-like-feed" href="#"><i class="icon ion-thumbsup"></i></a>
+            <div class="people-like"><strong> 99 people</strong> like this.</div>
+        </div>
+        <div style="clear:both"></div>
+        <ion-list>
+            <ion-item class="item-comment" >
+                <div style="width: 100%">
+                    <div style="float:left;width:24%">
+                        <img src="http://www.cs.tut.fi/~foi/SA-DCT/original/image_Lena512.png" width="40" style="border-radius: 100%">
+                    </div>
+                    <div style="float:right;width:75%;font-size: small">
+                        <strong>Max Lynx</strong>
+                        <p>However, using the ionList and ionItem directives make it easy.</p>
+                        <small>December 05, 2014</small>
+                        &nbsp;&nbsp;<a href="#">Like</a>
+                        &nbsp;&nbsp;<span class="icon ion-thumbsup"></span>&nbsp;<small>2</small>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="item-comment" >
+                <div class="comment" style="width: 100%">
+                    <div style="float:left;width:24%">
+                        <img src="https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg" width="40" style="border-radius: 100%">
+                    </div>
+                    <div style="float:right;width:75%;font-size: small">
+                        <strong>Andrew Jostlen</strong>
+                        <p>Both the list item.</p>
+                        <small>December 05, 2014</small>
+                        &nbsp;&nbsp;<a href="#">Unlike</a>&nbsp;&nbsp;<a href="#">Edit</a>
+                        &nbsp;&nbsp;<span class="icon ion-thumbsup"></span>&nbsp;<small>5</small>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <textarea  placeholder="Write a comment..."></textarea>
+            </label>
+            <button class="button button-small button-clear button-assertive ion-paper-airplane button-send-comment">
+            </button>
+        </div>
+    </ion-content>
+</ion-modal-view>

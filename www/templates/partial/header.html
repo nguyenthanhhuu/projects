@@ -1,0 +1,8 @@
+<div class="bar bar-header header"  ng-controller="NavCtrl as navCtrl">
+    <a ng-click="navCtrl.showMenu()"><img class="title-image" src="img/logo.png" width="40" height="40" /></a>
+    <label class="item-input-wrapper search-input" ng-show='navCtrl.isLoggedin()'>
+    	<input placeholder="Search" type="search" style="height:23px">
+        <button class="button button-clear search-btn"><i class='icon ion-ios-search'></i></button>
+    </label>
+    <label class="label-title" ng-show='!navCtrl.isLoggedin()'>{{pageTitle}}</label>
+</div>

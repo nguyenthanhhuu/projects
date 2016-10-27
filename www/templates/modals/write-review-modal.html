@@ -1,0 +1,53 @@
+<ion-modal-view class="grey-background">
+    <ion-content class="padding no-header">
+        <div class="list card card-wrapper">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Title<span class="assertive"> *</span></span>
+                <input type="text">
+            </label>
+            <label class="item item-input item-select">
+                <span class="input-label">Category<span class="assertive"> *</span></span>
+                <select>
+                    <option>Select</option>
+                    <option>Books</option>
+                    <option>Auto</option>
+                    <option>Electronics</option>
+                    <option>Hotels</option>
+                    <option>Lifestyle</option>
+                </select>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Review Text<span class="assertive"> *</span></span>
+                <textarea placeholder="Comments" rows="4"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Punch Line<span class="assertive"> *</span></span>
+                <input type="text">
+            </label>
+
+            <div ng-controller="RatingCtrl" class="star-color text-center">
+                <rating ng-model="rate" max="max" readonly="isReadonly"></rating>
+            </div>
+
+            <ul class="list">
+                <li class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" checked="true">
+                    </label>
+                    Available for public view
+                </li>
+            </ul>
+            <div class="text-center">
+                <button class="button button-calm modal-btn ">
+                    Save
+                </button>
+                <button class="button button-positive modal-btn ">
+                    Publish
+                </button>
+                <button class="button button-light modal-btn " ng-click="modal.hide()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>
